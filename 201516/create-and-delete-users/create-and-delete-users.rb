@@ -7,33 +7,35 @@
 #pero nunca entra en la condicion de user == "root" lo demas creo que el planteamiento
 #está bien y no se si lo podría haber hecho de otra forma.
 
-
 user = `whoami`
+puts user
 
 
-if user=="root" then
-	users = `cat userslist.txt`
-	userslist = users.split("/n")
-	
-	userslist.each do |usu|
-		campo = usu.split(":")
-		nombre = campo[0]
-		apellido = campo[1]
-		email = campo[2]
-		action = campo[3]
-		
-		if action=="delete"
-			system ("#{nombre} delete")
-		end
-		
-		if action== "add"
-			system ("#{nombre} add")
-		end
-	end
+if user == "root"
+    users = `cat userslist.txt`
+    userslist = users.split("/n")
+    
+    userslist.each do |usu|
+        campo = usu.split(":")
+        
+        nombre = campo[0]
+        apellido = campo[1]
+        email = campo[2]
+        action = campo[3]
+        
+        if action == "delete"
+            puts "deluser -f -r #{campo[0]}"
+        end
+        
+        if action == "add"
+            puts "adduser #{campo[0]}"
+        end
+    end
+    
 end
-	
-if user!="root" then
-	puts user
-	puts "** Usuario sin permiso porfavor ejecutalo como root **"
+
+if user != "root"
+
+    puts "** Usuario sin permiso porfavor ejecuta como root **"
 
 end
