@@ -1,4 +1,5 @@
-geany:i
 apache2:r
 php5:r
-leafpad:install
+leafpad:r
+vlc:install
+pitivi:i
