@@ -2,7 +2,7 @@
 # enconding: utf-8
 # create by: Kilian Manuel González Martín
 
-usuarios = `cat userlist.txt`
+usuarios = `cat userslist.txt`
 
 listaUsuarios = usuarios.split("\n")
 
