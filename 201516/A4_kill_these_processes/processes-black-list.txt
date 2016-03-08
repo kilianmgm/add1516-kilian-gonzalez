@@ -1,0 +1,3 @@
+firefox:k
+geany:n
+apache2:kill
