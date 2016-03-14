@@ -48,9 +48,9 @@ hostname -f
 uname -a
 blkid
 ```
-![1](./1.png)
-![2](./2.png)
-![3](./3.png)
+![1](./1.PNG)
+![2](./2.PNG)
+![3](./3.PNG)
 
 
 * Crear 3 usuarios locales llamados: primer-del-apellido-alumno1, primer-del-apellido-alumno2,
@@ -58,10 +58,10 @@ primer-del-apellido-alumno3.
 
 ## 3.3 Instalar el servicio LTSP
 * Instalar el servidor SSH `apt-get install openssh-server`.
-![6](./6.png)
+![6](./6.PNG)
 * Instalar servidor de clientes ligeros, según la documentación para el SO elegido. 
 En el caso de Debian/Ubuntu puede ser `apt-get install ltsp-server-standalone`.
-![7](./7.png)
+![7](./7.PNG)
 * Ahora vamos a crear un imagen del SO a partir del sistema real haciendo `ltsp-build-client`.
 La imagen del SO se cargará en la memoria de los clientes ligeros.
 
@@ -71,8 +71,8 @@ La imagen del SO se cargará en la memoria de los clientes ligeros.
 entonces usar el comando siguiente `ltsp-build-client --arch i386` para crear una imagen
 de 32 bits.
 >
-![8](./8.png)
-![9](./9.png)
+![8](./8.PNG)
+![9](./9.PNG)
 * Ejecutar `ltsp-info`, para consultar información.
  
 > **Comandos LTSP: Para volver a actualizar la imagen**
