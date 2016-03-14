@@ -81,43 +81,7 @@ de 32 bits.
 > * `ltsp-update-sshkeys`
 > * `ltsp-update-image`
 
-Revisamos la configuración del servicio DHCP instalado junto con LTSP:
-* Revisar la configuración de la tarjeta de red interna del servidor. 
-IP estática compatible con la configuración dhcp.
-* Consultamos el fichero de configuración `/etc/ltsp/dhcpd.conf`. 
-Comprobar las rutas de `option root-path /opt/ltsp/amd64` y de `filename /ltsp/amd64/pxelinux.0`.
-Veamos una imagen de ejemplo.
 
-![dhcpdconf](./ltsp-dhcpdconf.png)
-
-> **IP de la red interna**
->
-> Si se desea usar una IP diferente en la red interna entonces será necesario
-modificar también el fichero del servidor DHCP `/etc/ltsp/dhcpd.conf` y luego reiniciar el servicio.
->
-
-* Reiniciamos el servidor, y comprobamos que los servicios están corriendo.
-![ltsp-services-running](./ltsp-services-running.png)
-
-> SERVICIO DHCP
->
-> Otra forma de comprobar si el servicio `/etc/init.d/isc-dhcp-server status`.
-> * Si el servidor DHCP no se ha iniciado automáticamente al reiniciar el equipo, entonces
-vamos a intentar iniciarlo manualmente con `/etc/init.d/isc-dhcp-server start`.
-> * Si hay algún error deberemos consultar syslog `tail /var/log/syslog`.
-> * Para cambiar las opciones del arranque del servicio DHCP editamos fichero `/etc/default/isc-dhcp-server`.
-Y establecemos la variable INTERFACES con el nombre del interfaz de red donde debe trabajar.
->
-
-> SERVICIO TFTP
->
-> Otra forma de comprobar si el servicio `/etc/init.d/tftpd-hpa status`.
-> * Si el servicio TFTP DHCP no se ha iniciado automáticamente al reiniciar el equipo, entonces
-vamos a intentar iniciarlo manualmente con `/etc/init.d/tftpd-hpa start`.
-> * Si hay algún error deberemos consultar syslog `tail /var/log/syslog`.
-> * Para cambiar las opciones del arranque del servicio TFTP editamos fichero `/etc/default/tftpd-hpa`.
-Y establecemos la variable TFTP_ADDRESS al valor de la IP:PORT de la interfaz de trabajo, esto es `192.168.0.1:69`.
->
 
 # 4. Preparar MV Cliente
 Crear la MV cliente en VirtualBox:
