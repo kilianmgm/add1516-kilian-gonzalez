@@ -89,6 +89,7 @@ Crear la MV cliente en VirtualBox:
 * Sólo tiene RAM, flopy
 * Tarjeta de red PXE en modo "red interna".
 ![10](./clienteconf.png)
+
 Con el servidor encendido, iniciar la MV cliente desde PXE:
 * Comprobar que todo funciona correctamente.
 * Si la tarjeta de red no inicia correctamente el protocolo PXE, 
