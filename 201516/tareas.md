@@ -36,10 +36,10 @@ Capturar imágen de la configuración del equipo:
 
 * Vamos a programar una tarea diferida (comando `at`) para apagar el equipo.
 * Compruebo que at está en funcionamiento
-![](./3.png)
+![](./3.PNG)
 * El comando para apagar el sistema es `shutdown`.
 
-![](./4.png)
+![](./4.PNG)
 
 > * Si el usuario no tuviera permisos para ejecutar at, consultar los ficheros:
 >     * `/etc/at.deny`
@@ -48,7 +48,7 @@ Capturar imágen de la configuración del equipo:
 ##1.3 Tarea periódica
 
 * Antes de usar cron comprobamos que está instalado.
-![](./5.png)
+![](./5.PNG)
 * Programar una tarea periódica (crontab) que nos mostrará un mensaje en pantalla.
 * Para programar una tarea periódica tenemos estas formas:
     * Los usuarios usan el comando `crontab`  para programar sus tareas.
@@ -63,12 +63,12 @@ Capturar imágen de la configuración del equipo:
     zenity --info --text="¡Que la fuerza te acompañe!"
 ```
 * Instalo el zenity
- ![](./6.png)
+ ![](./6.PNG)
 * Para la ejecución de la tarea cada minuto introducimos en /var/spool/cron/tabs/aitor los parámetos para que sea interpretado y la ruta donde está ubicado el script.
-![](./7.png)
+![](./7.PNG)
 
 * Comprobación del contenido del script y la tarea en funcionamiento.
-![](./8.png)
+![](./8.PNG)
 
 > * NOTA: para poder llevar a cabo esta tarea hay que instalar zenity previamente.
 
@@ -82,19 +82,19 @@ Capturar imágen de la configuración del equipo:
    
 
 * Primero que nada, comprobamos el contenido del script y lo ejecutamos.
-![] ![](./9.png)
- ![](./10.png)
- ![](./11.png)
+![] ![](./9.PNG)
+ ![](./10.PNG)
+ ![](./11.PNG)
 
 * Seguidamente nos vamos al directorio donde guardaremos el backup y observamos que ha funcionado.
-![](./12.png)
+![](./12.PNG)
 
 > Para definir una tarea asíncrona ponemos el script de ejecución en alguno 
 de los directorios siguientes:
 > * /etc/cron.hourly
 
 > * /etc/cron.daily
-![](./13.png)
+![](./13.PNG)
 > * /etc/cron.weekly
 > * /etc/cron.monthly
 
@@ -108,7 +108,7 @@ Configurar máquina *Windows 7 Professional* con:
 * IP: 172.18.11.11 
 
 
-![](./14.png)
+![](./14.PNG)
 
 
 ##2.2 Tarea diferida
@@ -119,9 +119,9 @@ de ánimo en pantalla.
 `Panel de control -> Herramientas administrativas -> Programador de tareas`.
 
 * Creamos la tarea básica de tipo mostrar un mensaje.
-![](./15.png)
+![](./15.PNG)
 * Comprobación de la realización de la tarea:
-![](./16.png)
+![](./16.PNG)
 
 ##2.3 Tarea periódica
 
@@ -132,9 +132,9 @@ de ánimo en pantalla.
 > * `shutdown /s`: Programar un apagado.
 
 * Creamos la tarea básica de tipo iniciar un programa.
-![](./17.png)
+![](./17.PNG)
 * Comprobación de la realización de la tarea:
-![](./18.png)
+![](./18.PNG)
 
 ##2.4 Tarea asíncrona
 
@@ -143,11 +143,11 @@ de ánimo en pantalla.
 para copiar los documentos del usuario en una zona de backup.
     * Directorio de datos `c:\Users\nombre-alumno1\`.
     * Directorio para guardar el backup `c:\backup-XX\nombre-alumno1`.
-    ![](./19.png)
+    ![](./19.PNG)
     
 
 
 * Comprobación de la realización de la tarea:
-![](./20.png)
-![](./21.png)
+![](./20.PNG)
+![](./21.PNG)
 
