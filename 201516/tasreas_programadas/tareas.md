@@ -1,4 +1,4 @@
-<center>***Kilian Manuel González Martín - 2º ASIR***</center> 
+<center>***Kilian Manuel GonzÃ¡lez MartÃ­n - 2Âº ASIR***</center> 
 
 
 
@@ -6,22 +6,22 @@
 
 #1. SO OpenSUSE
 
-##1.1 Configuración de la máquina
+##1.1 ConfiguraciÃ³n de la mÃ¡quina
 
 Configurar el equipo GNU/Linux OpenSUSE 13.2 con:
 * IP: 172.18.11.51 
-* Máscara de red: 255.255.0.0
+* MÃ¡scara de red: 255.255.0.0
 * Gateway: 172.18.0.1
 * Servidor DNS: 8.8.4.4
 * Nombre de equipo: gonzalez3
 * Nombre de dominio: martin
 
 
-Además también:
+AdemÃ¡s tambiÃ©n:
 * Instalar openssh-server para que el profesor pueda acceder de forma remota.
-![](./1.png)
+![](./1.PNG)
 
-Capturar imágen de la configuración del equipo:
+Capturar imÃ¡gen de la configuraciÃ³n del equipo:
 
     uname -a
     hostname -a
@@ -30,27 +30,27 @@ Capturar imágen de la configuración del equipo:
     route -n
     blkid
     
-![](./2.png)
+![](./2.PNG)
 
 ##1.2 Tarea diferida
 
 * Vamos a programar una tarea diferida (comando `at`) para apagar el equipo.
-* Compruebo que at está en funcionamiento
-![](./3.png)
+* Compruebo que at estÃ¡ en funcionamiento
+![](./3.PNG)
 * El comando para apagar el sistema es `shutdown`.
 
-![](./4.png)
+![](./4.PNG)
 
 > * Si el usuario no tuviera permisos para ejecutar at, consultar los ficheros:
 >     * `/etc/at.deny`
 >     * `/etc/at.allow`
 
-##1.3 Tarea periódica
+##1.3 Tarea periÃ³dica
 
-* Antes de usar cron comprobamos que está instalado.
-![](./5.png)
-* Programar una tarea periódica (crontab) que nos mostrará un mensaje en pantalla.
-* Para programar una tarea periódica tenemos estas formas:
+* Antes de usar cron comprobamos que estÃ¡ instalado.
+![](./5.PNG)
+* Programar una tarea periÃ³dica (crontab) que nos mostrarÃ¡ un mensaje en pantalla.
+* Para programar una tarea periÃ³dica tenemos estas formas:
     * Los usuarios usan el comando `crontab`  para programar sus tareas.
     * El usuario root usa el fichero `/etc/crontab` para programar las tareas del sistema. 
 * Ejemplo de script que muestra un mensaje de aviso:
@@ -60,21 +60,21 @@ Capturar imágen de la configuración del equipo:
     # Mostrar mensaje en pantalla
     DISPLAY=:0
     export DISPLAY
-    zenity --info --text="¡Que la fuerza te acompañe!"
+    zenity --info --text="Â¡Que la fuerza te acompaÃ±e!"
 ```
 * Instalo el zenity
- ![](./6.png)
-* Para la ejecución de la tarea cada minuto introducimos en /var/spool/cron/tabs/aitor los parámetos para que sea interpretado y la ruta donde está ubicado el script.
-![](./7.png)
+ ![](./6.PNG)
+* Para la ejecuciÃ³n de la tarea cada minuto introducimos en /var/spool/cron/tabs/aitor los parÃ¡metos para que sea interpretado y la ruta donde estÃ¡ ubicado el script.
+![](./7.PNG)
 
-* Comprobación del contenido del script y la tarea en funcionamiento.
-![](./8.png)
+* ComprobaciÃ³n del contenido del script y la tarea en funcionamiento.
+![](./8.PNG)
 
 > * NOTA: para poder llevar a cabo esta tarea hay que instalar zenity previamente.
 
-##1.4 Tarea asíncrona
+##1.4 Tarea asÃ­ncrona
 
-* Vamos a programar una tarea asíncrona para realizar una copia de backup.
+* Vamos a programar una tarea asÃ­ncrona para realizar una copia de backup.
 * Podemos usar el comando `tar` dentro de un script para realizar la 
   copia de los ficheros del usuario en una zona de backup.
     * Directorio de datos `/home/nombre-alumno1`.
@@ -82,19 +82,19 @@ Capturar imágen de la configuración del equipo:
    
 
 * Primero que nada, comprobamos el contenido del script y lo ejecutamos.
-![] ![](./9.png)
- ![](./10.png)
- ![](./11.png)
+![] ![](./9.PNG)
+ ![](./10.PNG)
+ ![](./11.PNG)
 
 * Seguidamente nos vamos al directorio donde guardaremos el backup y observamos que ha funcionado.
-![](./12.png)
+![](./12.PNG)
 
-> Para definir una tarea asíncrona ponemos el script de ejecución en alguno 
+> Para definir una tarea asÃ­ncrona ponemos el script de ejecuciÃ³n en alguno 
 de los directorios siguientes:
 > * /etc/cron.hourly
 
 > * /etc/cron.daily
-![](./13.png)
+![](./13.PNG)
 > * /etc/cron.weekly
 > * /etc/cron.monthly
 
@@ -102,52 +102,52 @@ de los directorios siguientes:
 
 #2. Windows7
 
-##2.1 Configuración de la máquina
+##2.1 ConfiguraciÃ³n de la mÃ¡quina
 
-Configurar máquina *Windows 7 Professional* con:
+Configurar mÃ¡quina *Windows 7 Professional* con:
 * IP: 172.18.11.11 
 
 
-![](./14.png)
+![](./14.PNG)
 
 
 ##2.2 Tarea diferida
 
 * Vamos a programar una tarea diferida para que nos muestre un mensaje 
-de ánimo en pantalla.
+de Ã¡nimo en pantalla.
 * En Windows 7 para abrir el programador de tareas hacemos 
 `Panel de control -> Herramientas administrativas -> Programador de tareas`.
 
-* Creamos la tarea básica de tipo mostrar un mensaje.
-![](./15.png)
-* Comprobación de la realización de la tarea:
-![](./16.png)
+* Creamos la tarea bÃ¡sica de tipo mostrar un mensaje.
+![](./15.PNG)
+* ComprobaciÃ³n de la realizaciÃ³n de la tarea:
+![](./16.PNG)
 
-##2.3 Tarea periódica
+##2.3 Tarea periÃ³dica
 
-* Vamos a programar una tarea periódica para apagar el equipo.
+* Vamos a programar una tarea periÃ³dica para apagar el equipo.
 * El comando para apagar el sistema es `shutdown`.
 
 > * `shutdown /?`: Muestra la ayuda del comando.
 > * `shutdown /s`: Programar un apagado.
 
-* Creamos la tarea básica de tipo iniciar un programa.
-![](./17.png)
-* Comprobación de la realización de la tarea:
-![](./18.png)
+* Creamos la tarea bÃ¡sica de tipo iniciar un programa.
+![](./17.PNG)
+* ComprobaciÃ³n de la realizaciÃ³n de la tarea:
+![](./18.PNG)
 
-##2.4 Tarea asíncrona
+##2.4 Tarea asÃ­ncrona
 
-* Vamos a programar una tarea asíncrona para realizar una copia de backup.
+* Vamos a programar una tarea asÃ­ncrona para realizar una copia de backup.
 * Como ejemplo podemos crear un fichero `backup.bat` con comandos del tipo `xcopy`,
 para copiar los documentos del usuario en una zona de backup.
     * Directorio de datos `c:\Users\nombre-alumno1\`.
     * Directorio para guardar el backup `c:\backup-XX\nombre-alumno1`.
-    ![](./19.png)
+    ![](./19.PNG)
     
 
 
-* Comprobación de la realización de la tarea:
-![](./20.png)
-![](./21.png)
+* ComprobaciÃ³n de la realizaciÃ³n de la tarea:
+![](./20.PNG)
+![](./21.PNG)
 
