@@ -95,6 +95,7 @@ Con el servidor encendido, iniciar la MV cliente desde PXE:
 * Si la tarjeta de red no inicia correctamente el protocolo PXE, 
 conectar disquete Etherboot en la disquetera, tal y como se indica en la documentación de la web de LTSP.
 ![10](./cliente.png)
+
 *En mi caso no recibe ip por dhcp, por lo tanto no inicia la MV.
 
 En la imagen podemos ver un ejemplo de la ventana de login de un cliente ligero(EJEMPLO DE COMO SE DEBERÍA DE VER). 
