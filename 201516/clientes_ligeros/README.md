@@ -92,9 +92,10 @@ Crear la MV cliente en VirtualBox:
 
 Con el servidor encendido, iniciar la MV cliente desde PXE:
 * Comprobar que todo funciona correctamente.
+* ![11](./cliente.png)
 * Si la tarjeta de red no inicia correctamente el protocolo PXE, 
 conectar disquete Etherboot en la disquetera, tal y como se indica en la documentación de la web de LTSP.
-![10](./cliente.png)
+![12](./error.png)
 
 *En mi caso no recibe ip por dhcp, por lo tanto no inicia la MV.
 
